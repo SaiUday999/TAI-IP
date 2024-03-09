@@ -1,0 +1,134 @@
+body {
+    font-family: 'Roboto', sans-serif; 
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f8f8; 
+}
+
+header {
+    text-align: center;
+    background-color: #30475e; 
+    color: white;          
+    padding: 30px 20px;    
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2); 
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block; 
+    margin: 0 15px;
+}
+
+nav a { 
+    color: white;
+    text-decoration: none;  
+}
+
+nav a:hover {
+    color: #cad5e2; 
+}
+
+main section {
+    margin-bottom: 10px; 
+    padding: 30px;
+    background-color: white;
+    border-radius: 5px;         
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+} 
+
+main section h2 {
+    font-size: 2.4em; 
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+main section p {
+    line-height: 1.6; 
+}
+
+footer {
+    text-align: center;
+    background-color: #30475e; 
+    color: white;
+    padding: 1px;
+    position: fixed;          
+    bottom: 0;
+    width: 100%;  
+}
+
+/* Hero Section Styles */
+#hero {
+    background-image: url("https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"); 
+    background-size: cover;
+    background-position: center;
+    height: 400px; 
+    display: flex;          
+    align-items: center;    
+    justify-content: center; 
+    color: white;     
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); 
+}
+
+.hero-content { 
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 3em;  
+    margin-bottom: 5px;  
+}
+
+/* Skill Showcase Styles */
+#skills ul li { 
+    display: inline-block;  
+    margin: 5px;       
+    padding: 8px;        
+    border-radius: 3px; 
+}
+
+#skills ul li:hover {
+    background-color: #e8e8e8; /* Light background on hover */
+}
+
+/* Styles for filter buttons */
+.filter-button {
+    background-color: #30475e; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 10px 10px 0; 
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-button:hover {
+    background-color: #253645; 
+}
+
+/* Styles to hide filterable sections initially */
+.filterable-sections section {
+    display: none; 
+}
+
+/* Styles for your profile picture */
+.profile-pic { 
+    width: 200px;
+    height: 200px;
+    border-radius: 10px; 
+    margin-top: 15px;
+    display: block;      
+    margin-left: auto;   
+    margin-right: auto;
+
+    /* Optional - For more robust centering */
+    margin-left: 50%;   
+    transform: translateX(-50%);
+
+    /* Optional - If you want a border */
+    border: 2px solid #ddd; 
+} 

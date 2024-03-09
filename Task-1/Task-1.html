@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>KARANAM SAI UDAY KUMAR</h1>
+  </header>
+
+  <main>
+    <section id="hero">
+      <div class="hero-content">
+        <h2>Passionate About Crafting Digital Experiences</h2>
+        <p>Exploring Web Development, App Development, and more...</p>
+      </div>
+    </section>
+
+    <button class="filter-button" data-for="about">About Me</button>
+    <button class="filter-button" data-for="skills">Skills</button>
+    <button class="filter-button" data-for="education">Education</button>
+    <button class="filter-button" data-for="contact">Get in Touch</button>
+
+    <div class="filterable-sections">
+      <section id="about">
+        <h2>About Me</h2>
+        <p>I am interested in developing applications for both Android & iOS. I like to create new things that don't exist yet. I also enjoy listening to music and discovering new music.</p>
+        <img src="https://i1.sndcdn.com/avatars-GVOwdcsneSlJzF1p-NT75Ig-t240x240.jpg" alt="Your Photo" class="profile-pic">
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li><i class="fab fa-html5"></i> HTML</li>
+          <li><i class="fab fa-css3-alt"></i> CSS</li>
+          <li><i class="fab fa-js-square"></i> JavaScript</li>
+          <li><i class="fab fa-python"></i> Python</li>
+          <li><i class="fab fa-java"></i> Java</li>
+          <li><i class="fab fa-apple"></i> Swift (learning...)</li>
+          <li>C++</li>
+          <li>C</li>
+        </ul>
+        <img src="https://i1.sndcdn.com/avatars-GVOwdcsneSlJzF1p-NT75Ig-t240x240.jpg" alt="Your Photo" class="profile-pic">
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <img src="https://upload.wikimedia.org/wikipedia/en/9/90/Alliance_University_Icon.svg" alt="Alliance University Logo" width="78" height="78" style="margin-right: 10px;"> BTECH - Alliance University (2025) 
+          </li> 
+        </ul> 
+        <img src="https://i1.sndcdn.com/avatars-GVOwdcsneSlJzF1p-NT75Ig-t240x240.jpg" alt="Your Photo" class="profile-pic">
+      </section>
+
+      <section id="contact">
+        <h2>Get in Touch</h2>
+        <p>Email: saiudaykumar3@gmail.com</p>
+        <img src="https://i1.sndcdn.com/avatars-GVOwdcsneSlJzF1p-NT75Ig-t240x240.jpg" alt="Your Photo" class="profile-pic"> 
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 UDAY KARANAM</p>
+  </footer>
+
+  <script>
+    window.addEventListener('load', function() { // Run after page loads
+      const buttons = document.querySelectorAll('.filter-button');
+      const sections = document.querySelectorAll('.filterable-sections section');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          const targetSection = button.dataset.for; 
+
+          sections.forEach(section => {
+            section.style.display = 'none';
+
+            const imageInSection = section.querySelector('.profile-pic');
+            if (imageInSection) { 
+              imageInSection.style.display = 'none'; 
+            }
+          });
+
+          const activeSection = document.getElementById(targetSection);
+          activeSection.style.display = 'block'; 
+
+          const activeImage = activeSection.querySelector('.profile-pic');
+          if (activeImage) {
+            activeImage.style.display = 'block';
+          }
+        });
+      });
+    }); 
+  </script>
+</body>
+</html>
